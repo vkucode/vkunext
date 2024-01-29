@@ -40,7 +40,7 @@
 
 .titleHeaderCenter > h1 {
     font-family: "Montserrat", sans-serif;
-    font-weight: 800;
+    font-weight: 500;
     font-size: 4.5em;
     // Nu este nevoie de alte stiluri aici, deoarece mix-blend-mode este aplicat containerului părinte
 }
@@ -52,13 +52,7 @@
     font-size: 2.5em;
     // Nu este nevoie de alte stiluri aici, deoarece mix-blend-mode este aplicat containerului părinte
 }
-.titleHeader > p {
+.subHeader{
+    
     font-family: 'Kodchasan', sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #fff;
-    font-size: 3.5em;
-    // Nu este nevoie de alte stiluri aici, deoarece mix-blend-mode este aplicat containerului părinte
 }
-
