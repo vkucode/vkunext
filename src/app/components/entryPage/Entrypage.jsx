@@ -24,7 +24,7 @@ const EntrypPageLoading = () => {
     setTimeout(() => {
       setTextSpan("power");
       setGoBTN("animate__fadeInUp")
-    }, 800);
+    }, 1200);
     
     setTimeout(() => {
       setGoBTN("animate__fadeInUp")
