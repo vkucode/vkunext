@@ -1,13 +1,39 @@
 "use client"
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import Image from 'next/image'
 import styles from './home.module.scss'
 
 const HomePage = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    // Funcția care încearcă să pornească redarea video
+    const playVideo = async () => {
+      if (videoRef.current) {
+        try {
+          await videoRef.current.play();
+        } catch (err) {
+          console.error("Eroare la pornirea videoclipului", err);
+        }
+      }
+    };
+
+    playVideo();
+  }, []);
+
   return (
     <header className={styles.header}>
         <div className={styles.overlayVideo}></div>
-        <video src="/vkucodeEntryVideo.mp4" className={styles.videoHeader} autoPlay loop muted></video>
+       <video 
+        ref={videoRef} 
+        src="/vkucodeEntryVideo.mp4" 
+        className={styles.videoHeader} 
+        autoPlay 
+        loop 
+        muted 
+        playsInline // Aceasta proprietate este importantă pentru dispozitivele mobile
+        controls={false} // Dezactivează controalele
+      ></video>
         <div className={styles.titleHeaderCenter}>
 
             {/* <Image src='/logoNOBG.png' width={200} height={200} /> */}
