@@ -5,7 +5,6 @@
     width: 100dvw;
     height: 100dvh; 
 }
-
 .overlayVideo {
     position: absolute;
     top: 0;
@@ -15,7 +14,6 @@
     background: rgba(0, 0, 0, 0.2);
     z-index: 1; 
 }
-
 .videoHeader {
     position: absolute;
     top: 0;
@@ -25,7 +23,6 @@
     object-fit: cover;
     z-index: -1;
 }
-
 .titleHeaderCenter {
     position: absolute;
     z-index: 2; 
@@ -53,13 +50,6 @@
     color: #fff;
     font-size: 2.5em;
     letter-spacing: 3px;
-}
-.titleHeaderCenter > h2 {
-    font-family: 'Kodchasan', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 1.5em;
 }
 .subHeader{
     position: relative;
@@ -89,7 +79,23 @@
     font-size: 1.5em;
 }
 @media (max-width: 768px) {
-    
+    .titleHeaderCenter > div > span {
+        font-weight: 600;
+        font-size: 2em;
+    }
+    .subHeader{
+        padding: 0px 0px 30px 20px;
+    }
+    .subHeader > h1{
+        letter-spacing: 5px;
+        font-weight: 700;
+        font-size: 1em;
+    }
+    .subHeader > h2{
+        letter-spacing: 5px;
+        font-weight: 300;
+        font-size: 0.5em;
+    }
 }
 
 
