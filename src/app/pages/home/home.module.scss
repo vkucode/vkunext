@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@300&family=Montserrat:wght@100;300;400;600;800;900&display=swap');
+.header {
+    position: relative;
+    width: 100vw; // Corectat de la 100dvw
+    height: 100vh; // Corectat de la 100dvh
+}
+
+.overlayVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; // Corectat de la 100dvw și adăugat width și height
+    height: 100vh; // Corectat de la 100dvh
+    background: rgba(0, 0, 0, 0.2); // Simplificat sintaxa pentru rgba
+    z-index: 1; // Asigură-te că overlay-ul este deasupra videoului, dar sub text
+}
+
+.videoHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; // Corectat de la 100dvw
+    height: 100vh; // Corectat de la 100dvh
+    object-fit: cover;
+    z-index: -1;
+}
+
+.titleHeaderCenter {
+    position: absolute;
+    z-index: 2; // Asigură-te că textul este deasupra overlay-ului și a videoului
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    text-align: center;
+    color: #fff; // Setează culoarea textului
+    mix-blend-mode: difference; // Aplică mix-blend-mode la întregul container
+}
+
+.titleHeaderCenter > h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 4.5em;
+    // Nu este nevoie de alte stiluri aici, deoarece mix-blend-mode este aplicat containerului părinte
+}
+.titleHeaderCenter > span {
+    font-family: 'Kodchasan', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2.5em;
+    // Nu este nevoie de alte stiluri aici, deoarece mix-blend-mode este aplicat containerului părinte
+}
+.titleHeader > p {
+    font-family: 'Kodchasan', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    font-size: 3.5em;
+    // Nu este nevoie de alte stiluri aici, deoarece mix-blend-mode este aplicat containerului părinte
+}
+

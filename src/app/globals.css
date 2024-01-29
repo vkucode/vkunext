@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@300&family=Montserrat:wght@100;300;400;600;800;900&display=swap");
+
+@font-face {
+  font-family: Damione;
+  src: url(./assets/fonts/DaMiOne-Regular.ttf);
+}
+@font-face {
+  font-family: gikBrutal;
+  src: url(./assets/fonts/gik-brutal.otf);
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,6 +28,8 @@
 }
 
 body {
+  max-width: 100dvw;
+  overflow: hidden;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
