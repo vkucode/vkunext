@@ -52,7 +52,7 @@ const Logo = ({ color = "white" }) => {
   // Temp logo from https://logoipsum.com/
   return (
     <div className="flex items-center gap-2">
-    <Image src="/logoNOBG.png" width={50} height={50} />
+    <Image src="/logoNOBG.png" width={50} height={50} alt="vkucode Logo" />
     </div>
   );
 };

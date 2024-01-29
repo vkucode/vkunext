@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <header className={styles.header}>
         <div className={styles.overlayVideo}></div>
-        <video src="/vkucodeEntryVideo.mp4.mp4" className={styles.videoHeader} autoPlay loop muted></video>
+        <video src="/vkucodeEntryVideo.mp4" className={styles.videoHeader} autoPlay loop muted></video>
         <div className={styles.titleHeaderCenter}>
 
             {/* <Image src='/logoNOBG.png' width={200} height={200} /> */}
