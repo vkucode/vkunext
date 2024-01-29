@@ -1,58 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@300&family=Montserrat:wght@100;300;400;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 .header {
     position: relative;
-    width: 100vw; // Corectat de la 100dvw
-    height: 100vh; // Corectat de la 100dvh
+    width: 100dvw;
+    height: 100dvh; 
 }
 
 .overlayVideo {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw; // Corectat de la 100dvw și adăugat width și height
-    height: 100vh; // Corectat de la 100dvh
-    background: rgba(0, 0, 0, 0.2); // Simplificat sintaxa pentru rgba
-    z-index: 1; // Asigură-te că overlay-ul este deasupra videoului, dar sub text
+    width: 100dvw; 
+    height: 100dvh; 
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1; 
 }
 
 .videoHeader {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw; // Corectat de la 100dvw
-    height: 100vh; // Corectat de la 100dvh
+    width: 100dvw; 
+    height: 100dvh; 
     object-fit: cover;
     z-index: -1;
 }
 
 .titleHeaderCenter {
     position: absolute;
-    z-index: 2; // Asigură-te că textul este deasupra overlay-ului și a videoului
+    z-index: 2; 
     display: flex;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: #fff; // Setează culoarea textului
-    mix-blend-mode: difference; // Aplică mix-blend-mode la întregul container
+    color: #fff; 
+    mix-blend-mode: difference; 
 }
-
-.titleHeaderCenter > h1 {
-    font-family: "Montserrat", sans-serif;
+.titleHeaderCenter > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.titleHeaderCenter > div >  span {
+    font-family: 'Orbitron', sans-serif;
     font-weight: 500;
-    font-size: 4.5em;
-    // Nu este nevoie de alte stiluri aici, deoarece mix-blend-mode este aplicat containerului părinte
-}
-.titleHeaderCenter > span {
-    font-family: 'Kodchasan', sans-serif;
-    font-weight: 900;
     text-transform: uppercase;
     color: #fff;
     font-size: 2.5em;
-    // Nu este nevoie de alte stiluri aici, deoarece mix-blend-mode este aplicat containerului părinte
+    letter-spacing: 3px;
+}
+.titleHeaderCenter > h2 {
+    font-family: 'Kodchasan', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5em;
 }
 .subHeader{
-    
-    font-family: 'Kodchasan', sans-serif;
+    position: relative;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    mix-blend-mode: difference;
+    color: #fff;
+    padding: 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
 }
+.subHeader > h1{
+    letter-spacing: 5px;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+.subHeader > h2{
+    letter-spacing: 5px;
+    font-weight: 300;
+    font-size: 1.5em;
+}
+@media (max-width: 768px) {
+    
+}
+
+
+/*------------------------------------------------------------------------------------------------*/

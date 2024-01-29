@@ -11,11 +11,12 @@ const HomePage = () => {
         <div className={styles.titleHeaderCenter}>
 
             {/* <Image src='/logoNOBG.png' width={200} height={200} /> */}
-            <h1>VKU CODE</h1>
-            <span>for us the sky is not the limit</span>
+            <div><span>for</span>&nbsp;<Image src='/logoNOBG.png' width={50} height={50} alt=''/>&nbsp;<span>the&nbsp;sky&nbsp;is</span></div>
+            <div><span>not&nbsp;the&nbsp;limit</span></div>
         </div>
         <div className={styles.subHeader}>
-          <h2>Paris based Digital Design Agency</h2>
+          <h1>VKU CODE</h1>
+          <h2>Paris Based Digital Design Agency</h2>
         </div>
     </header>
   )
