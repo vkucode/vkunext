@@ -78,6 +78,11 @@
     font-weight: 300;
     font-size: 1.5em;
 }
+@supports (mix-blend-mode: difference) {
+    .titleHeaderCenter {
+        mix-blend-mode: difference; 
+    }
+}
 @media (max-width: 768px) {
     .titleHeaderCenter > div > span {
         font-weight: 600;
