@@ -32,8 +32,8 @@ const FlyoutNav = () => {
       transition-all duration-300 ease-out lg:px-12
       ${
         scrolled
-          ? "bg-neutral-950 py-3 shadow-xl"
-          : "bg-neutral-950/0 py-6 shadow-none"
+          ? "bg-neutral-900 py-3 shadow-xl bg"
+          : "bg-neutral-900/0 py-6 shadow-none"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
@@ -48,11 +48,11 @@ const FlyoutNav = () => {
   );
 };
 
-const Logo = ({ color = "white" }) => {
+const Logo = ({ src = "/logoNOBG.png" }) => {
   // Temp logo from https://logoipsum.com/
   return (
     <div className="flex items-center gap-2">
-    <Image src="/logoNOBG.png" width={50} height={50} alt="vkucode Logo" />
+    <Image src={src} width={50} height={50} alt="vkucode Logo" />
     </div>
   );
 };
@@ -86,7 +86,7 @@ const NavLink = ({ children, href, FlyoutContent }) => {
           style={{
             transform: showFlyout ? "scaleX(1)" : "scaleX(0)",
           }}
-          className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full bg-indigo-300 transition-transform duration-300 ease-out"
+          className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full bg-purple-300 transition-transform duration-300 ease-out"
         />
       </a>
       <AnimatePresence>
@@ -114,10 +114,10 @@ const CTAs = () => {
     <div className="flex items-center gap-3">
       <button className="flex items-center gap-2 rounded-lg border-2 border-white px-4 py-2 font-semibold text-white transition-colors hover:bg-white hover:text-black">
         <FaUserCircle />
-        <span>Sign in</span>
+        <span>Login</span>
       </button>
-      <button className="rounded-lg border-2 border-indigo-300 bg-indigo-300 px-4 py-2 font-semibold text-black transition-colors hover:border-indigo-600 hover:bg-indigo-600 hover:text-white">
-        Schedule a Demo
+      <button className="rounded-lg border-2 border-purple-300 bg-purple-300 px-4 py-2 font-semibold text-black transition-colors hover:border-purple-500 hover:bg-purple-500 hover:text-white">
+        Let's talk
       </button>
     </div>
   );
@@ -130,12 +130,12 @@ const AboutUsContent = () => {
         <div>
           <h2 className="mb-2 text-xl font-semibold text-white">About us</h2>
           <p className="mb-6 max-w-xs text-sm text-neutral-400">
-            Placeholder is the world's leading placeholder company.
+          Some useful information about our company, if you are curious :)
           </p>
         </div>
         <a
           href="#"
-          className="flex items-center gap-1 text-xs text-indigo-300 hover:underline"
+          className="flex items-center gap-1 text-xs text-purple-300 hover:underline"
         >
           Learn more <FiArrowRight />
         </a>
@@ -147,7 +147,7 @@ const AboutUsContent = () => {
         >
           <h3 className="mb-1 font-semibold">Features</h3>
           <p className="text-xs">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quam?
+          Innovative web solutions at your fingertips.
           </p>
         </a>
         <a
@@ -156,19 +156,19 @@ const AboutUsContent = () => {
         >
           <h3 className="mb-1 font-semibold">Testimonials</h3>
           <p className="text-xs">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quam?
+          Hear success stories from our happy clients.
           </p>
         </a>
         <a
           href="#"
           className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
         >
-          <h3 className="mb-1 font-semibold">Press</h3>
+          <h3 className="mb-1 font-semibold">Work</h3>
           <p className="text-xs">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quam?
+          Browse our portfolio of cutting-edge web projects.
           </p>
         </a>
-        <a
+        {/* <a
           href="#"
           className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
         >
@@ -176,7 +176,7 @@ const AboutUsContent = () => {
           <p className="text-xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quam?
           </p>
-        </a>
+        </a> */}
       </div>
     </div>
   );
@@ -218,64 +218,52 @@ const PricingContent = () => {
 const ServicesContent = () => {
   return (
     <div className="grid w-full grid-cols-12 shadow-xl lg:w-[750px]">
-      <div className="col-span-12 flex flex-col justify-between bg-indigo-600 p-6 lg:col-span-4">
+      <div className="col-span-12 flex flex-col justify-between bg-purple-600 p-6 lg:col-span-4">
         <div className="mb-6">
           <h2 className="mb-2 text-xl font-semibold text-white">Services</h2>
           <p className="text-sm text-indigo-100">
-            Placeholder was rated a top place to work by Placeholder.
+          Tailored web, app, and marketing services for you.
           </p>
         </div>
         <a
           href="#"
-          className="flex items-center gap-1 text-xs text-indigo-200 hover:underline"
+          className="flex items-center gap-1 text-xs text-purple-200 hover:underline"
         >
-          Services site <FiArrowRight />
+          Services page <FiArrowRight />
         </a>
       </div>
       <div className="col-span-12 grid grid-cols-2 gap-3 bg-white p-6 lg:col-span-8 lg:grid-cols-3">
         <div className="space-y-3">
-          <h3 className="font-semibold">Business</h3>
+          <h3 className="font-semibold">WEB</h3>
           <a href="#" className="block text-sm hover:underline">
-            Marketing
+            Websites
           </a>
           <a href="#" className="block text-sm hover:underline">
-            Finance
+            Applications
           </a>
           <a href="#" className="block text-sm hover:underline">
-            Legal
+            E-commerce
           </a>
           <a href="#" className="block text-sm hover:underline">
-            Sales
+            CMR
           </a>
         </div>
         <div className="space-y-3">
-          <h3 className="font-semibold">Engineering</h3>
+          <h3 className="font-semibold">Marketing</h3>
           <a href="#" className="block text-sm hover:underline">
-            Full stack
+            SEO
           </a>
           <a href="#" className="block text-sm hover:underline">
-            Dev ops
+            Audit
           </a>
           <a href="#" className="block text-sm hover:underline">
-            QA
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            Data
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            Machine learning
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            Management
+            Ads Campaigns
           </a>
         </div>
         <div className="space-y-3">
           <h3 className="font-semibold">More</h3>
           <a href="#" className="block text-sm hover:underline">
             Support
-          </a>
-          <a href="#" className="block text-sm hover:underline">
-            Office
           </a>
           <a href="#" className="block text-sm hover:underline">
             Other
@@ -359,10 +347,10 @@ const MobileMenu = () => {
             animate={{ x: 0 }}
             exit={{ x: "100vw" }}
             transition={{ duration: 0.15, ease: "easeOut" }}
-            className="fixed left-0 top-0 flex h-dvh w-full flex-col bg-white"
+            className="fixed left-0 top-0 flex h-dvh w-full flex-col bg-neutral-100"
           >
             <div className="flex items-center justify-between p-6">
-              <Logo color="black" />
+              <Logo src="/logoNOBGBlack.png" />
               <button onClick={() => setOpen(false)}>
                 <FiX className="text-3xl text-neutral-950" />
               </button>
@@ -406,9 +394,5 @@ const LINKS = [
     text: "Services",
     href: "#",
     component: ServicesContent,
-  },
-  {
-    text: "Documentation",
-    href: "#",
   },
 ];

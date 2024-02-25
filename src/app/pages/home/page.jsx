@@ -2,9 +2,23 @@
 import React, {useEffect, useRef} from 'react'
 import Image from 'next/image'
 import styles from './home.module.scss'
+import Like from './components/Like'
+import ServicesHome from './components/ServicesHome'
+import gsap from 'gsap';
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
 const HomePage = () => {
   const videoRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollSmoother);
+    ScrollSmoother.create({
+      wrapper: '#smooth-wrapper',
+      content: '#smooth-content',
+      smooth: 2,
+      effects: true,
+    });
+  }, []);
 
   useEffect(() => {
     // Funcția care încearcă să pornească redarea video
@@ -22,6 +36,11 @@ const HomePage = () => {
   }, []);
 
   return (
+    <>
+    <div id="smooth-wrapper">
+          <div id="smooth-content">
+
+
     <header className={styles.header}>
         <div className={styles.overlayVideo}></div>
        <video 
@@ -45,6 +64,15 @@ const HomePage = () => {
           <h2>Paris Based Digital Design Agency</h2>
         </div>
     </header>
+    <section className={`${styles.sectionHome}`}>
+      <Like />
+    </section>
+    <section className={`${styles.sectionHome}`}>
+      <ServicesHome />
+    </section>
+    </div>
+    </div>
+    </>
   )
 }
 export default HomePage;

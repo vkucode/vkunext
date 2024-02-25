@@ -2,12 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
 
 .containerObject {
+  @apply bg-neutral-900;
   left: 0;
   top: 0;
   position: fixed;
   z-index: 999999999;
   width: 100%;
-  background: #060606;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,32 +17,29 @@
 }
 @keyframes whiteBack {
   0% {
-    background: #060606;
+    background: rgb(23, 23, 23);
   }
   48% {
-    background: #060606;
+    background: rgb(23, 23, 23);
   }
   50% {
     background: #fff;
   }
   52% {
-    background: #060606;
+    background: rgb(23, 23, 23);
   }
   54% {
-    background: #060606;
+    background: rgb(23, 23, 23);
   }
   56% {
     background: #fff;
   }
   58% {
-    background: #060606;
+    background: rgb(23, 23, 23);
   }
 }
-.gone {
-  transition: 0.5s all ease-in-out;
-  position: fixed;
-  top: -100vh !important;
-  left: 0;
+.containerObject.gone {
+  top: -100dvh !important;
 }
 
 .canvasModel > canvas {
@@ -99,6 +96,7 @@
 }
 .thunderObject {
   opacity: 1;
+  height: 400px;
   animation: thunderIntro 3s 1;
   transform: skew(0deg, 0deg);
 }

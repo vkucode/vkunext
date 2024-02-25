@@ -9,11 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.0",
     "@react-three/drei": "^9.96.5",
     "@react-three/fiber": "^8.15.15",
     "@react-three/postprocessing": "^2.15.12",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^1.0.54",
+    "@studio-freight/lenis": "^1.0.37",
+    "@studio-freight/react-lenis": "^0.0.45",
     "animate.css": "^4.1.1",
     "framer-motion": "^11.0.3",
+    "gsap": "npm:@gsap/business@^3.12.5",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",

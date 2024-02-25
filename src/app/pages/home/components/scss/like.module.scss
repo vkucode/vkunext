@@ -1,0 +1,73 @@
+.likeMainBlock{
+    @apply flex flex-col justify-center items-center;
+    width: 100%;
+    height: 60dvh;
+    max-width: 1200px;
+    .likeFeel{
+        @apply text-2xl text-right;
+        font-family: "Orbitron";
+        margin-top: 30px;
+        letter-spacing: 2px;
+    }
+}
+.likeBlock{
+    @apply flex flex-row justify-center items-center relative z-10;
+    width: 100%;
+    height: 100%;
+}
+.likeText{
+    @apply flex flex-col gap-2 text-4xl;
+    font-family: "Orbitron";
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    font-weight: 400;
+    z-index: 0;
+    max-width: 1200px;
+    max-height: 1000px;
+    .line1{
+        @apply  top-0;
+    }
+    .line2{
+        @apply  right-0;
+    }
+    .line3{
+        @apply  bottom-0;
+    }
+}
+.modelLike{
+    @apply relative;
+    max-width: 450px;
+    max-height: 1000px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+@media (max-width:768px) {
+    .likeMainBlock{
+        height: 70dvh;
+        margin-top: 30px;
+        .likeFeel{
+            @apply text-lg text-right;
+            margin-bottom: -70px;
+        }
+    }
+    .likeBlock{
+        @apply items-center;
+    }
+    .modelLike{
+        max-width: 190px;
+        height: 100%;
+        max-height: 500px;
+    }
+    .likeText{
+        @apply flex flex-col justify-center items-start text-lg gap-0;
+        height: 100%;
+        padding: 10px 0px 0px 10px;
+        .line1{
+        }
+        .line2{
+        }
+        .line3{
+        }
+    }
+}   

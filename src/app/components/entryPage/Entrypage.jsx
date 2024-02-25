@@ -34,16 +34,20 @@ const EntrypPageLoading = () => {
     const handleStartClick = () => {
       const entryPageContainer = document.getElementById('entrypageContainer');
       // Aplică animația de fade out
-      entryPageContainer.classList.add("animate__fadeOutUp")
-
-      // Ascunde containerul după ce animația este completă
       setTimeout(() => {
           if (entryPageContainer) {
-              entryPageContainer.style.display = 'none';
+              entryPageContainer.classList.add("animate__fadeOutUp");
+              
           }
-      }, 1500); // Presupunem că durata animației este de 1000ms
+      }, 500); // Presupunem că durata animației este de 1000ms
+      setTimeout(() => {
+        if(entryPageContainer){
+          entryPageContainer.style.display = 'none';
+        }
+      }, 1000)
+        
   };
-    
+
 
     const Model = ({ rotation, modelImport }) => {
         const model = useLoader(GLTFLoader, modelImport);
@@ -83,14 +87,14 @@ const EntrypPageLoading = () => {
   return (
     <>
     
-    <div className={`${styles.containerObject} container-fluid animate__animated`} id='entrypageContainer'>
+    <div className={`${styles.containerObject} animate__animated`} id='entrypageContainer'>
         <div className='row'>
             <div className='col-12'>
                 <div>
                     <h1 className={`${styles.textEntry} animate__animated animate__fadeInUp`}>feel&nbsp;the&nbsp;<img src={logoVku} alt="" width={"40px"} />&nbsp;<span className={`${styles.textSpan}`}>{textSpan}</span></h1>
                 </div>
                 <div className={`${styles.thunderObject}`}>
-                <Canvas style={{width: "100%" ,height: "400px;"}}>
+                <Canvas style={{width: "100%" ,height: "100%"}}>
                     <ambientLight intensity={2} />
                     <pointLight position={[10, 10, 10]} castShadow />
                     <Suspense fallback={null}>
